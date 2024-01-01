@@ -16,12 +16,24 @@
   }
 }
 
+html,body {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 8px 0 0 8px;
+  background-color: #18181b;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
